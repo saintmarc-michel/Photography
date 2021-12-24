@@ -34,6 +34,9 @@ body, html{
     width: 100%;
     justify-content: space-between;
     padding: 20px;
+}
+a{
+    text-decoration: none;
     color: whitesmoke;
 }
 ul{
@@ -199,7 +202,7 @@ section{
     margin: 10px;
 }
 
-.footer{
+#footer{
     width: 100%;
     min-height: 100px;
     padding: 20px 80px;
@@ -219,7 +222,7 @@ section{
 .contact a{
     margin-bottom: 10px;
 }
-.footer p{
+#footer p{
     color: whitesmoke;
     margin: 20px auto;
 }
@@ -238,7 +241,7 @@ img:hover {
     color: #0f4b51;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.555);
 }
-li:hover{
+a:hover{
     color: #0f4b51;
     cursor:inherit;
 }
@@ -310,6 +313,11 @@ li:hover{
     .col img{
         max-width: 97%;
     }
+    .row .col img{
+        height: 100%;
+        width: 100%;
+    }
+    
     /* explore */
     .explore-content{
         padding: 17px;
@@ -332,7 +340,7 @@ li:hover{
         width: 100%;
         margin-left: -10px;
     }
-    .footer{
+    #footer{
         padding: 10px;
     }
     .contact{
