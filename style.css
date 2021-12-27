@@ -290,6 +290,10 @@ a:hover{
         height: 100%;
         width: 100%;
     }
+    #New .row{
+        margin-left: 0;
+    }
+    
     
     /* explore */
     .explore-content{
