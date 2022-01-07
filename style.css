@@ -354,7 +354,7 @@ a:hover{
         height: 90%;
     }
     figure figcaption{
-        bottom: -45%;
+        bottom: -40%;
     }
     .row{
         flex-direction: column;
@@ -374,10 +374,6 @@ a:hover{
         height: 100%;
         width: 100%;
     }
-    #New .row{
-        margin-left: 0;
-    }
-    
     
     /* explore */
     .explore-content{
