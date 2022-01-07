@@ -28,12 +28,12 @@ body, html{
     background: rgba(255, 255, 255, 0.06274509803921569);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.9px);
-    -webkit-backdrop-filter: blur(5px);
     top: 0;
     left: 0;
     width: 100%;
     justify-content: space-between;
     padding: 20px;
+    z-index: 1;
 }
 a{
     text-decoration: none;
@@ -117,26 +117,27 @@ section{
     color: whitesmoke;
 }
 .row{
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     width: 100%;
-    justify-content: space-between;
+    height: 100vh;
 }
-.row .col {
+/* .row .col {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.row .col img{
+} */
+/* .row .col img{
     height: 600px;
     width: 450px;
-}
-#New .row{
+} */
+/* #New .row{
     margin-top: 100px;
     margin-left: 6%;
-}
-
-.row h3{
+} */
+/* .row h3{
     font-size: 20px;
     color: white;
     font-weight: bold;
@@ -146,7 +147,81 @@ section{
 .row p{
     color: whitesmoke;
     padding: 0px 40px;
+} */
+figure {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 500px; */
+    height: 580px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    z-index: 0;
 }
+figure:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+figure:hover img {
+    transform: scale(1.25);
+}
+figure:hover figcaption {
+    bottom: 0;
+}
+figure h1 {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+figure img {
+    height: 100%;
+    transition: 0.25s;
+}
+figure figcaption {
+    position: absolute;
+    bottom: -22%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    color: whitesmoke;
+    line-height: 1;
+    transition: 0.25s;
+}
+  figure figcaption h3 {
+    margin: 0 0 40px;
+    padding: 0;
+  }
+  figure figcaption p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  figure figcaption button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0;
+    padding: 8px 15px;
+    background: #A43931;
+    border-radius: 30px;
+    color: whitesmoke;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+
 
 /* explore */
 .explore-content{
@@ -158,6 +233,7 @@ section{
 }
 .explore-content h1{
     font-size: 45px;
+    margin-top: 130px;
 }
 .explore-content .line{
     margin-bottom: 50px;
@@ -184,7 +260,7 @@ section{
 #Gallery .image-gallery{
     display: flex;
     flex-wrap: wrap;
-    width: 104%;
+    width: 110%;
     align-items: center;
 }
 .image-gallery img{
@@ -238,7 +314,7 @@ a:hover{
 
 
 /* mobile device */
-@media only screen and (max-width:850px){
+@media (max-width: 1199.98px){
     .menu-btn{
         display: none;
     }
@@ -273,20 +349,28 @@ a:hover{
 
 
     /* events */
+    .image-block{
+        width: 100%;
+        height: 90%;
+    }
+    figure figcaption{
+        bottom: -45%;
+    }
     .row{
         flex-direction: column;
     }
-    .row .col{
+    .row .image-block{
         margin: 20px auto;
+        top: 22%;
     }
-    .row p{
+    /* .row p{
         padding: 0;
         font-size: 17px;
-    }
-    .col img{
+    } */
+    .image-block img{
         max-width: 97%;
     }
-    .row .col img{
+    .row .image-block img{
         height: 100%;
         width: 100%;
     }
@@ -298,8 +382,7 @@ a:hover{
     /* explore */
     .explore-content{
         padding: 17px;
-        margin: 0;
-        width: 100%;
+        
     }
     .explore-content h1{
         font-size: 25px;
@@ -322,7 +405,6 @@ a:hover{
     }
     .image-gallery{
         justify-content: center;
-        align-items: center;
     }
     .image-gallery img{
         width: 100%;
