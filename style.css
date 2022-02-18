@@ -72,11 +72,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: brightness(0.9);
 }
 
 .header-content{
     margin-bottom: 10px;
-    color: whitesmoke;
+    color: whitesmoke; 
     text-align: center;
 }
 .header-content h1{
